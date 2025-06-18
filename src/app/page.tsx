@@ -140,7 +140,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col h-screen bg-gray-100 dark:bg-gray-900">
-      <header className="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-white dark:bg-gray-800 shadow-md rounded-t-2xl border-b border-gray-200 dark:border-gray-700">
+      <header className="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-blue-200 dark:bg-gray-800 shadow-md rounded-t-2xl border-b border-gray-200 dark:border-gray-700">
 
   {/* Left - Chat Title */}
   <div className="text-lg font-semibold text-gray-800 dark:text-white tracking-wide">

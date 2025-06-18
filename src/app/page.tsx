@@ -237,7 +237,7 @@ export default function Home() {
         />
 
         <button
-          onClick={handleVoiceInput}
+          // onClick=//{handleVoiceInput}
           className={`px-4 py-2 rounded-lg ${
             isListening ? "bg-red-500" : "bg-gray-300 dark:bg-gray-700"
           } text-white`}

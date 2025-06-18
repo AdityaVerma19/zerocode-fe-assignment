@@ -33,17 +33,17 @@ It features a Firebase-powered login/register system, real-time chat UI, dark mo
 ## ⚙️ Setup Instructions
 
 ### 1. Clone the Repository
-```bash
+
 git clone https://github.com/AdityaVerma19/zerocode-fe-assignment.git
 cd zerocode-fe-assignment
 
-2. Install Dependencies
+### 2. Install Dependencies
 bash
 Copy
 Edit
 npm install
 
-3. Configure Firebase
+### 3. Configure Firebase
 Set up your Firebase project and paste your config in src/lib/firebase.ts.
 
 Example:
@@ -59,7 +59,7 @@ const firebaseConfig =
   appId: "..."
 };
 
-4. Run the App Locally
+### 4. Run the App Locally
 bash
 Copy
 Edit

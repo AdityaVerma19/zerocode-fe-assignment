@@ -1,41 +1,125 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💬 Zerocode FE Assignment – Chatbot Web App
 
-## Getting Started
+This is a modern, mobile-responsive chatbot web application built using **Next.js 14**, **TypeScript**, and **Tailwind CSS**, as part of the Zerocode Frontend Internship Assignment.
 
-First, run the development server:
+It features a Firebase-powered login/register system, real-time chat UI, dark mode toggle, and bonus features like prompt templates and chat export.
 
+---
+
+## 🚀 Features
+
+- 🔐 **Authentication** via Firebase (register + login)
+- 💬 **Chat UI** with user-bot conversation
+- 🌗 **Dark/Light Mode Toggle**
+- 🧠 **Prompt Templates** for quick testing
+- 💾 **Chat Export** (.txt file download)
+- 🎯 **Responsive UI** for desktop & mobile
+- 🎨 **Styled login/register pages** inspired by Uiverse.io
+
+---
+
+## 🧱 Tech Stack
+
+| Tool       | Usage                      |
+|------------|----------------------------|
+| **Next.js** | App routing, pages, layout |
+| **TypeScript** | Type safety, props        |
+| **Tailwind CSS** | Responsive styling     |
+| **Firebase Auth** | User login/register  |
+| **Vercel** | Hosting + CI/CD pipeline    |
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the Repository
 ```bash
+git clone https://github.com/AdityaVerma19/zerocode-fe-assignment.git
+cd zerocode-fe-assignment
+
+2. Install Dependencies
+bash
+Copy
+Edit
+npm install
+
+3. Configure Firebase
+Set up your Firebase project and paste your config in src/lib/firebase.ts.
+
+Example:
+
+ts
+Copy
+Edit
+const firebaseConfig = 
+{
+  apiKey: "...",
+  authDomain: "...",
+  projectId: "...",
+  appId: "..."
+};
+
+4. Run the App Locally
+bash
+Copy
+Edit
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🌐 Live Demo
+🔗 https://zerocode-fe-assignment-ctpb.vercel.app
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Login Page → /login
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Register Page → /register
 
-## Learn More
+Chat Interface → / (after login)
 
-To learn more about Next.js, take a look at the following resources:
+🧪 Test Credentials
+makefile
+Copy
+Edit
+Email: aditya1234@gmail.com
+Password: Aditya
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🧠 Architecture Diagram
+txt
+Copy
+Edit
+src/
+├── app/
+│   ├── login/        → Login page (Next.js app router)
+│   ├── register/     → Register page
+│   ├── layout.tsx    → Global layout wrapper
+│   └── page.tsx      → Main Chat UI (protected)
+│
+├── components/
+│   └── ThemeToggle.tsx     → Dark mode toggle switch
+│
+├── lib/
+│   └── firebase.ts         → Firebase app config
+│
+├── context/
+│   └── AuthContext.tsx     → Firebase auth provider
+📷 Screenshots
+(Save these in public/screens/ and replace links below)
 
-## Deploy on Vercel
+Login Page	Chat Interface	Dark Mode
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+📂 Folder Structure Overview
+src/app/: Pages using Next.js App Router
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# zerocode-fe-assignment
-My Frontend Task
->>>>>>> 52f6afb8db86f640c0e7b24fffa312725a473011
+src/components/: UI components like ThemeToggle
+
+src/lib/: Firebase initialization
+
+src/context/: Auth provider logic
+
+tailwind.config.js: Tailwind theme customization
+
+📄 License
+This project was built as part of a frontend internship assignment for Zerocode.
+You are free to fork, clone, or extend it for educational/demo purposes.
+
+Built with ❤️ by Aditya Verma

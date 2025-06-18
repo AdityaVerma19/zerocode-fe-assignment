@@ -7,17 +7,24 @@ import { auth } from "@/lib/firebase";
 import { useState, useRef, useEffect } from "react";
 import ThemeToggle from "@/components/ThemeToggle";
 
-const SpeechRecognition =
-  typeof window !== "undefined" &&
-  (window.SpeechRecognition || (window as any).webkitSpeechRecognition);
+// declare global {
+//   interface Window {
+//     SpeechRecognition: any;
+//     webkitSpeechRecognition: any;
+//   }
+// }
 
-let recognition: any;
+// const SpeechRecognition =
+//   typeof window !== "undefined" &&
+//   (window.SpeechRecognition || window.webkitSpeechRecognition);
 
-if (SpeechRecognition) {
-  recognition = new SpeechRecognition();
-  recognition.continuous = false;
-  recognition.lang = "en-US";
-}
+// let recognition: any;
+
+// if (SpeechRecognition) {
+//   recognition = new SpeechRecognition();
+//   recognition.continuous = false;
+//   recognition.lang = "en-US";
+// }
 
 interface Message {
   id: number;
@@ -114,29 +121,29 @@ export default function Home() {
     router.push("/login");
   };
 
-  const handleVoiceInput = () => {
-    if (!recognition) {
-      alert("Speech Recognition not supported in this browser.");
-      return;
-    }
+  // const handleVoiceInput = () => {
+  //   if (!recognition) {
+  //     alert("Speech Recognition not supported in this browser.");
+  //     return;
+  //   }
 
-    if (!isListening) {
-      recognition.start();
-      setIsListening(true);
+  //   if (!isListening) {
+  //     recognition.start();
+  //     setIsListening(true);
 
-      recognition.onresult = (event: any) => {
-        const transcript = event.results[0][0].transcript;
-        setInput((prev) => prev + " " + transcript);
-      };
+  //     recognition.onresult = (event: any) => {
+  //       const transcript = event.results[0][0].transcript;
+  //       setInput((prev) => prev + " " + transcript);
+  //     };
 
-      recognition.onend = () => {
-        setIsListening(false);
-      };
-    } else {
-      recognition.stop();
-      setIsListening(false);
-    }
-  };
+  //     recognition.onend = () => {
+  //       setIsListening(false);
+  //     };
+  //   } else {
+  //     recognition.stop();
+  //     setIsListening(false);
+  //   }
+  // };
 
   return (
     <div className="flex flex-col h-screen bg-gray-100 dark:bg-gray-900">
